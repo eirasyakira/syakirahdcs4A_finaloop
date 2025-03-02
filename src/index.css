@@ -1,0 +1,287 @@
+body {
+  font-family: Arial, sans-serif;
+  background: radial-gradient(circle, rgba(220,215,201,0.6), rgba(220,215,201,0.6)), url('masjid.avif') no-repeat center center fixed;
+  background-size: cover;
+  color: #2C3930;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0; /* Remove default margin */
+}
+
+p, h1, h2 {
+  margin: 20px;
+}
+
+#hadith-container {
+  margin-bottom: 20px;
+  padding: 20px;
+  background: rgba(162,123,92,0.5);
+  border-radius: 5px;
+  color: #2C3930;
+}
+
+button {
+  margin-right: 10px;
+  background-color: #3F4F44;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none; /* Remove underline */
+}
+
+header{
+  color: black;
+  text-align: center;
+}
+
+footer {
+  background: rgba(222, 184, 135, 0.5); /* Adjusted background color */
+  color: black;
+  padding: 10px;
+  text-align: center;
+  margin-top: auto; /* Push footer to the bottom */
+  padding: 2px;
+}
+
+input, .hadith-button {
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #3F4F44;
+}
+
+.home-button, .hadith-random-button, .hadith-fav-button {
+  background: rgba(222, 184, 135, 0.5), rgba(180, 142, 94, 0.5);
+  color: white;
+  padding: 7px 10px;
+  border-radius: 5px;
+  text-decoration: none; /* Remove underline */
+}
+
+.home-button:hover, .hadith-random-button:hover, .hadith-fav-button:hover {
+  background-color: rgb(180, 142, 94);
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+h1, h2 {
+  text-align: center;
+}
+
+#app {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+#chapters-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.chapter-item {
+  background: rgba(255, 255, 255, 0.8);
+  padding: 10px;
+  border-radius: 5px;
+  width: calc(33.333% - 10px);
+  box-sizing: border-box;
+}
+
+#favorites-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+#favorites-list li {
+  padding: 10px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  margin-top: 10px;
+}
+
+/* ✅ Style container for 2-column layout */
+.fav-hadith-container {
+  display: flex;
+  gap: 30px; /* Space between hadiths */
+  justify-content: center; /* Center hadiths */
+}
+
+/* ✅ Each Hadith item */
+.hadith-item {
+  width: calc(50% - 30px); /* 2 items per row with gap consideration */
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  text-align: center;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.hadith-item button {
+  background-color: #3F4F44;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.hadith-item button:hover {
+  background-color: #2C3930;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* ✅ Make search bar always visible */
+.search-container {
+  padding: 10px;
+  text-align: center;
+}
+
+/* ✅ Style the search input and button */
+.search-container input {
+  padding: 8px;
+  width: 30%;
+  font-size: 16px;
+  border-radius: 5px;
+}
+
+.search-container button {
+  padding: 8px 15px;
+  font-size: 16px;
+  background-color: #3F4F44;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.search-container button:hover {
+  background-color: #2C3930;
+}
+
+#hadith-list, #fav-hadith-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.hadith-item {
+  flex: 1 1 calc(50% - 40px); /* Ensures 2 columns per row */
+  background: rgba(210, 180, 140, 0.5); /* Tan color with transparency */
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  min-width: 300px; /* Ensure proper size */
+  max-width: 400px; /* Adjust width to maintain 2-per-row */
+}
+
+.hadith-detail-container {
+  background: rgba(210, 180, 140, 0.5);
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: 20px auto;
+  text-align: left;
+}
+
+.hadith-detail-container button {
+  background-color: #3F4F44;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none; /* Remove underline */
+  margin-top: 20px;
+}
+
+.hadith-detail-container button:hover {
+  background-color: rgb(180, 142, 94);
+}
+
+/* Centered Content */
+#random-hadith-display {
+  text-align: center;
+  margin: 20px auto;
+  max-width: 900px;
+}
+
+/* Grid Layout for Hadiths (2 per row) */
+.hadith-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hadith-row {
+      flex-direction: column;
+  }
+  .hadith-item {
+      width: 100%; /* Full width on small screens */
+  }
+}
+
+#search-results {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.search-result-item {
+  flex: 1 1 calc(50% - 40px); /* Ensures 2 columns per row */
+  background: rgba(210, 180, 140, 0.5); /* Tan color with transparency */
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  min-width: 300px; /* Ensure proper size */
+  max-width: 400px; /* Adjust width to maintain 2-per-row */
+}

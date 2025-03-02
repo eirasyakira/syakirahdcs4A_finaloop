@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hadith Collection</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <header>
+        <h1>Hadith Bukhari Muslim</h1>
+        <a href="index.html" class="home-button">Home</a>
+        <a href="hadith-random.html" class="hadith-random-button">View Random Hadith</a>
+        <a href="hadith-fav.html" class="hadith-fav-button">View Favorites</a>
+    </header>
+    <main>
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="Search Hadith...">
+            <button onclick="searchHadith()">🔍 Search</button>
+        </div>
+        <!-- ✅ Display Area -->
+        <div id="search-results"></div>
+        <h2>📖 Hadith Collection</h2>
+        <div id="hadith-list"></div> <!-- Re-added the hadith list div -->
+    </main>
+    <footer>
+        <p>&copy; 2025 Hadith Buddy. All rights reserved.</p>
+    </footer>
+    <script src="hadith.js"></script>
+</body>
+</html>
