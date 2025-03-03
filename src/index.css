@@ -53,7 +53,7 @@ input, .hadith-button {
   border: 1px solid #3F4F44;
 }
 
-.home-button, .hadith-random-button, .hadith-fav-button {
+.home-button, .hadith-random-button, .hadith-fav-button, .hadith-reflection-button {
   background: rgba(222, 184, 135, 0.5), rgba(180, 142, 94, 0.5);
   color: white;
   padding: 7px 10px;
@@ -61,8 +61,29 @@ input, .hadith-button {
   text-decoration: none; /* Remove underline */
 }
 
-.home-button:hover, .hadith-random-button:hover, .hadith-fav-button:hover {
+.home-button:hover, .hadith-random-button:hover, .hadith-fav-button:hover, .hadith-reflection-button:hover {
   background-color: rgb(180, 142, 94);
+}
+
+.hadith-filter-container {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.hadith-filter-button {
+  background-color: #3F4F44;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.hadith-filter-button:hover {
+  background-color: #2C3930;
 }
 
 ul {
@@ -284,4 +305,35 @@ h1, h2 {
   text-align: center;
   min-width: 300px; /* Ensure proper size */
   max-width: 400px; /* Adjust width to maintain 2-per-row */
+}
+
+/* ✅ Style Reflection Dropdown Like Search Input */
+#reflection-category {
+  padding: 8px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #3F4F44;
+  background: white;
+  cursor: pointer;
+  text-align: center;
+}
+
+/* ✅ Align Dropdown with Search Input */
+.search-container {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+/* ✅ Match Button and Input Styles */
+#reflection-category:hover {
+  background-color: #F5F5DC; /* Light beige on hover */
+}
+
+/* ✅ Adjust dropdown width */
+#reflection-category {
+  width: 250px; /* Match input field width */
+  text-align: center;
 }

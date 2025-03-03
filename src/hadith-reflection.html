@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Random Hadith</title>
+    <title>Hadith Reflection</title>
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
@@ -14,13 +14,21 @@
         <a href="hadith-fav.html" class="hadith-fav-button">View Favorites</a>
         <a href="hadith-reflection.html" class="hadith-reflection-button">Reflect on Hadith</a>
     </header>
+
     <main>
-        <h2>Random Hadith Display</h2>
-        <div id="random-hadith-display" class="random-hadith"></div>
+        <div class="search-container">
+            <label for="reflection-category">Filter by Category:</label>
+            <select id="reflection-category">
+                <option value="all">All Categories</option>
+            </select>
+            <div id="hadith-list"></div>
+        </div>        
     </main>
+    
     <footer>
-        <p>&copy; 2023 Hadith Buddy. All rights reserved.</p>
+        <p>&copy; 2025 Hadith Buddy. All rights reserved.</p>
     </footer>
-    <script src="hadith-random.js"></script>
+
+    <script src="hadith-reflection.js"></script>
 </body>
 </html>
